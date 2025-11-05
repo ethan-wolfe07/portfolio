@@ -41,7 +41,7 @@ Portfolio/
    └─ additionalMentions.txt
 ```
 
-## [Link to Website](https://ethanwolfe.vercel.app/).
+## [Link to Website](https://ethanwolfe.vercel.app/)
 
 ## Customization
 - Content: edit `index.html` (text, sections, links)

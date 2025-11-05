@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ethan Wolfe - Full Stack Developer & Data Engineer Portfolio. COO of GatorHall, Research Assistant at BioVision Lab, Expert in FastAPI, PostgreSQL, and Database Optimization.">
+    <meta name="keywords" content="Ethan Wolfe, Full Stack Developer, Data Engineer, FastAPI, PostgreSQL, BioVision, GatorHall, University of Florida">
+    <meta name="author" content="Ethan Wolfe">
+    <meta property="og:title" content="Ethan Wolfe - Developer Portfolio">
+    <meta property="og:description" content="Full Stack Developer & Data Engineer specializing in database optimization and web applications">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <title>Ethan Wolfe Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-trail"></div>
+    
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <span class="code-bracket">&lt;</span>
+                <span class="loading-text">EW</span>
+                <span class="code-bracket">/&gt;</span>
+            </div>
+            <div class="loading-progress">
+                <div class="progress-bar"></div>
+            </div>
+            <p class="loading-status">Initializing Portfolio...</p>
+        </div>
+        <div class="loading-particles"></div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">&lt;EthanWolfe/&gt;</span>
+            </div>
+            
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span>About</span>
+                </a>
+                <a href="#experience" class="nav-link" data-section="experience">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Experience</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#skills" class="nav-link" data-section="skills">
+                    <i class="fas fa-cogs"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+            
+            <div class="nav-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+                <div class="shape shape-5"></div>
+            </div>
+            <canvas id="particle-canvas"></canvas>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Hello, I'm</span>
+                    <span class="title-name">Ethan Wolfe</span>
+                    <span class="title-role">
+                        <span class="typing-text" data-words="Full Stack Developer,Data Engineer,Database Architect,Research Scientist,Problem Solver"></span>
+                        <span class="typing-cursor">|</span>
+                    </span>
+                </h1>
+                
+                <p class="hero-description">
+                    Passionate about building scalable applications and optimizing data pipelines. 
+                    Currently leading development at GatorHall and researching at BioVision Lab.
+                </p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-target="800">0</span>
+                        <span class="stat-label">Species Database</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="2">0</span>
+                        <span class="stat-label">Leadership Roles</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="5">0</span>
+                        <span class="stat-label">Tech Stacks</span>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-social">
+                    <a href="mailto:ethan.wolfe@ufl.edu" class="social-link" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/eewolfe/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="http://github.com/ethan-wolfe07" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-container">
+                    <div class="image-background"></div>
+                    <img src="assets/headshot.jpg" alt="Ethan Wolfe" class="profile-image">
+                    <div class="image-overlay">
+                        <div class="tech-orbit">
+                            <div class="tech-icon tech-1"><i class="fab fa-python"></i></div>
+                            <div class="tech-icon tech-2"><i class="fas fa-database"></i></div>
+                            <div class="tech-icon tech-3"><i class="fab fa-js"></i></div>
+                            <div class="tech-icon tech-4"><i class="fab fa-react"></i></div>
+                            <div class="tech-icon tech-5"><i class="fas fa-server"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span class="scroll-text">Scroll to explore</span>
+            <i class="fas fa-chevron-down scroll-arrow"></i>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// about me</span>
+                <h2 class="section-title">Crafting Digital Solutions</h2>
+                <p class="section-subtitle">Bridging the gap between complex data and user-friendly applications</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>My Journey</h3>
+                        <p>
+                            As a passionate developer and researcher, I specialize in building scalable web applications 
+                            and optimizing complex data systems. My experience spans from leading technical teams to 
+                            conducting cutting-edge research in biological data management.
+                        </p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>What Drives Me</h3>
+                        <p>
+                            I'm fascinated by the intersection of technology and real-world impact. Whether it's helping 
+                            students make informed housing decisions through GatorHall or advancing scientific research 
+                            with the BioVision database, I strive to create solutions that matter.
+                        </p>
+                    </div>
+                    
+                    <div class="achievements">
+                        <div class="achievement">
+                            <i class="fas fa-crown"></i>
+                            <div>
+                                <h4>COO & Database Lead</h4>
+                                <p>GatorHall - Student Housing Platform</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-microscope"></i>
+                            <div>
+                                <h4>Research Assistant</h4>
+                                <p>BioVision Lab - 800+ Species Database</p>
+                            </div>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>University of Florida</h4>
+                                <p>Data Science Student</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <span class="window-title">about_ethan.py</span>
+                        </div>
+                        <div class="code-content">
+                            <pre><code><span class="code-comment"># Developer Profile</span>
+<span class="code-keyword">class</span> <span class="code-class">EthanWolfe</span>:
+    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):
+        self.role = <span class="code-string">"Data Scientist"</span>
+        self.location = <span class="code-string">"Gainesville, FL"</span>
+        self.experience = [
+            <span class="code-string">"COO & Database Lead"</span>,
+            <span class="code-string">"Research Assistant"</span>,
+            <span class="code-string">"Software Engineer"</span>
+        ]
+        self.skills = {
+            <span class="code-string">"backend"</span>: [<span class="code-string">"FastAPI"</span>, <span class="code-string">"Python"</span>, <span class="code-string">"PostgreSQL"</span>],
+            <span class="code-string">"frontend"</span>: [<span class="code-string">"React"</span>, <span class="code-string">"JavaScript"</span>, <span class="code-string">"CSS3"</span>],
+            <span class="code-string">"databases"</span>: [<span class="code-string">"PostgreSQL"</span>, <span class="code-string">"DuckDB"</span>, <span class="code-string">"LanceDB"</span>]
+        }
+    
+    <span class="code-keyword">def</span> <span class="code-function">get_passion</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Building scalable solutions that impact lives"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+                <p class="section-subtitle">Leading teams and driving innovation across multiple domains</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-content">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3>COO & Database Lead</h3>
+                            <span class="company">GatorHall</span>
+                            <span class="duration">Current</span>
+                        </div>
+                        <p class="description">
+                            Leading the development of a comprehensive dorm review website for incoming and current 
+                            students. Responsible for database architecture, team coordination, and ensuring authentic 
+                            student experiences are captured and presented effectively.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Leadership</span>
+                            <span class="tech-tag">Database Design</span>
+                            <span class="tech-tag">Product Strategy</span>
+                            <span class="tech-tag">Team Management</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-content">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3>Undergraduate Research Assistant</h3>
+                            <span class="company">BioVision Lab</span>
+                            <span class="duration">Current</span>
+                        </div>
+                        <p class="description">
+                            Developing robust backend systems using FastAPI to support text and image queries across 
+                            a comprehensive database of 800+ butterfly species. Designing and optimizing data pipelines 
+                            with multiple database technologies and external sources like GBIF.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">DuckDB</span>
+                            <span class="tech-tag">LanceDB</span>
+                            <span class="tech-tag">GBIF Integration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-content">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3>Data Science Intern</h3>
+                            <span class="company">Omniangle Technologies</span>
+                            <span class="duration">2024</span>
+                        </div>
+                        <p class="description">
+                            Researched and compared vector embedding models including Amazon Titan, Cohere, and open-source 
+                            alternatives. Evaluated vector database platforms and designed a multimodal vector search system 
+                            supporting text and image queries using MongoDB Atlas.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Vector Embeddings</span>
+                            <span class="tech-tag">Amazon Titan</span>
+                            <span class="tech-tag">MongoDB Atlas</span>
+                            <span class="tech-tag">Pinecone</span>
+                            <span class="tech-tag">Amazon SageMaker</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-content">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3>Technology and Business Intern</h3>
+                            <span class="company">Alan Levan Center for Innovation at NSU</span>
+                            <span class="duration">2023</span>
+                        </div>
+                        <p class="description">
+                            Pioneered cutting-edge technology solutions for the City of Fort Lauderdale, focusing on municipal 
+                            efficiency. Designed and presented an AI-driven autonomous mapping rover with integrated sensor 
+                            technology, projected to increase robot-assisted operational efficiency by 20%.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AI Development</span>
+                            <span class="tech-tag">Autonomous Systems</span>
+                            <span class="tech-tag">Sensor Integration</span>
+                            <span class="tech-tag">Municipal Technology</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <div class="marker-content">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="content-header">
+                            <h3>Data Science Student</h3>
+                            <span class="company">University of Florida</span>
+                            <span class="duration">In Progress</span>
+                        </div>
+                        <p class="description">
+                            Pursuing a comprehensive education in data science with focus on machine learning, 
+                            statistical analysis, and data engineering. Actively applying classroom knowledge to 
+                            real-world projects and research opportunities in biological data systems.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">Statistical Analysis</span>
+                            <span class="tech-tag">Data Engineering</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// featured projects</span>
+                <h2 class="section-title">Building the Future</h2>
+                <p class="section-subtitle">Innovative solutions that make a real difference</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card featured" data-aos="zoom-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg bg-gradient-1"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>GatorHall</h3>
+                            <span class="project-status">Live</span>
+                        </div>
+                        <p>
+                            Comprehensive dorm review platform helping University of Florida students make informed 
+                            housing decisions through authentic peer reviews and detailed facility information.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">AWS</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-users"></i>
+                                <span>500+ Students</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-star"></i>
+                                <span>1000+ Reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Documentation">
+                                    <i class="fas fa-book"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Research">
+                                    <i class="fas fa-microscope"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg bg-gradient-2"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>BioVision Database</h3>
+                            <span class="project-status">Research</span>
+                        </div>
+                        <p>
+                            Advanced biological database system supporting text and image queries for 800+ butterfly 
+                            species with optimized data pipelines and external API integrations.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">DuckDB</span>
+                            <span class="tech-tag">LanceDB</span>
+                            <span class="tech-tag">GBIF</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-database"></i>
+                                <span>800+ Species</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-search"></i>
+                                <span>Multi-modal Search</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link" aria-label="View Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="View Source Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-bg bg-gradient-3"></div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Portfolio Website</h3>
+                            <span class="project-status">Live</span>
+                        </div>
+                        <p>
+                            Modern, responsive portfolio website featuring advanced animations, glassmorphism design, 
+                            and interactive elements showcasing development skills and project experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">GSAP</span>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Fully Responsive</span>
+                            </div>
+                            <div class="stat">
+                                <i class="fas fa-rocket"></i>
+                                <span>Fast Loading</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// technical skills</span>
+                <h2 class="section-title">Technology Stack</h2>
+                <p class="section-subtitle">Expertise across the full development spectrum</p>
+            </div>
+            
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-server"></i>
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">FastAPI</span>
+                                    <span class="skill-level">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js</span>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Database Systems</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PostgreSQL</span>
+                                    <span class="skill-level">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">DuckDB</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">LanceDB</span>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">CSS3</span>
+                                    <span class="skill-level">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category" data-aos="fade-up">
+                        <div class="category-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Technologies</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AWS</span>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-level">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-visual">
+                    <div class="tech-sphere">
+                        <div class="sphere-item" style="--i: 1;"><i class="fab fa-python"></i></div>
+                        <div class="sphere-item" style="--i: 2;"><i class="fas fa-database"></i></div>
+                        <div class="sphere-item" style="--i: 3;"><i class="fab fa-react"></i></div>
+                        <div class="sphere-item" style="--i: 4;"><i class="fab fa-js"></i></div>
+                        <div class="sphere-item" style="--i: 5;"><i class="fas fa-server"></i></div>
+                        <div class="sphere-item" style="--i: 6;"><i class="fab fa-aws"></i></div>
+                        <div class="sphere-item" style="--i: 7;"><i class="fab fa-docker"></i></div>
+                        <div class="sphere-item" style="--i: 8;"><i class="fab fa-git-alt"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// get in touch</span>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">Ready to collaborate on your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>ethan.wolfe@ufl.edu</p>
+                            <a href="mailto:ethan.wolfe@ufl.edu" class="contact-link">Send Message</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>Professional Network</p>
+                            <a href="https://www.linkedin.com/in/eewolfe/" class="contact-link" target="_blank" rel="noopener">Connect</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" data-aos="fade-right">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>Code Portfolio</p>
+                            <a href="http://github.com/ethan-wolfe07" class="contact-link" target="_blank" rel="noopener">View Projects</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" data-aos="fade-left">
+                    <form id="contact-form" class="form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="form-line"></span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">
+                        <span class="logo-text">&lt;EthanWolfe/&gt;</span>
+                    </div>
+                    <p class="footer-text">
+                        Building the future, one line of code at a time.
+                    </p>
+                    <div class="footer-social">
+                        <a href="mailto:ethan.wolfe@ufl.edu" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/eewolfe/" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="http://github.com/ethan-wolfe07" class="social-link" aria-label="GitHub" target="_blank" rel="noopener">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#projects">Projects</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="#skills">Skills</a>
+                        <a href="#contact">Contact</a>
+                        <a href="assets/resume.pdf" target="_blank">Resume</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ethan Wolfe. All rights reserved.</p>
+                <p>Designed and developed with <i class="fas fa-heart"></i> in Gainesville, FL</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    </script>
+</body>
+</html>
